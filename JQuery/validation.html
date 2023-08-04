@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <input type="password" name="t1" id="t1"> <span id="message"></span><br>
+
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $('#t1').keyup(function(){
+            let str=$('#t1').val()
+            if (str.length>7){
+                $('#message').html('valid');
+                $('#message').css("color","green");
+
+                if(str.match(/([!,%,&,@,#,$,^,*,?,_,~])/)){
+                    $('#message').html('password is strong');
+                    $('#message').css("color","green");
+                }
+                else{
+                    $('#message').html('password is medium')
+                    $('#message').css("color","orange");
+
+                }
+            }
+            
+            else{
+                $('#message').html('invalid');
+                $('#message').css("color","red");
+            }
+            
+            });
+
+        });
+
+</script>

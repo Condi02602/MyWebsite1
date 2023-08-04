@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <h1>This is my sample heading</h1>
+    <button id="b1">Fade in</button>
+    <button id="b2">Fade out</button>
+</body>
+</html>
+<script>
+    // code for fade in and fade out of text
+    $(document).ready(function(){
+
+        $("#b1").click(function(){
+            $("h1").fadeIn(2000);
+        })
+        $("#b2").click(function(){
+            $("h1").fadeOut(2000);
+        });
+
+    });
+</script>
+<script>  
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            let vi=validate();
+            if(vi==0){
+            let x=parseInt($("#t1").val());
+            let y=parseInt($("#t2").val());
+            let z=x+y;
+            $("#output").html(z);
+            }
+        });
+        $("#b2").click(function(){
+        let vi=validate();
+            if(vi==0){
+       let x=parseInt($("#t1").val());
+       let y=parseInt($("#t2").val());
+       let z=x-y;
+       $("#output").html(z);
+            }
+    });
+    $("#b3").click(function(){
+        let vi=validate();
+            if(vi==0){
+       let x=parseInt($("#t1").val());
+       let y=parseInt($("#t2").val());
+       let z=x*y;
+       $("#output").html(z);
+       
+            }
+    });
+    $("#b4").click(function(){
+        let vi=validate();
+            if(vi==0){
+       let x=parseInt($("#t1").val());
+       let y=parseInt($("#t2").val());
+       let z=x/y;
+       $("#output").html(z);
+            }
+    });
+ 
+
+    });
+    //   sub
+
+  function validate(){
+    let flag=0;
+    if($("#t1").val()==""){
+      alert("plz enter no.");
+      flag=1;
+    }
+    if($("#t2").val()==""){
+      alert("please enter number");
+      flag=1;
+
+    }
+    return flag;
+  }
+  function checkvalidaterange(){
+            
+    let f1=0;
+    let x = parseInt($("#t1").val());
+    let y=parseInt($("#t2").val());
+    if((x>=0 && x<100) && (y>=0 && y<100)){
+               
+    f1 =1;
+    }
+    else
+      {
+        f1=2;
+      }
+               
+    return f1;
+  }
+
+  
+
+
+        
+  </script>

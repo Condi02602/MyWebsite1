@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    birth date<input type="date" name="" id="d1" max="2005-12-31" min="2005-01-01">
+
+</body>
+<script>
+    $(document).ready(function(){
+       $("#d1").on('input',function(){
+        const selecteddate= new Date($("#d1").val());
+        const currentdate =new Date();
+        const mindate= new Date(currentdate.getFullYear()-18,currentdate.getMonth(),currentdate.getDate());
+        if(selecteddate>mindate){
+            alert("age should be 18");
+            $("#d1").val()="";
+        }
+        else if(selecteddate<mindate){
+            alert("")
+        }
+       })
+    })
+</script>
+</html>

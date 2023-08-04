@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+
+      $("#add").click(function () {
+        let vo = checkvalidate();
+        if (vo == 0) {
+          let bo = checkvalidaterange();
+          if (bo == 1) {
+            let x = parseInt($("#t1").val());
+            let y = parseInt($("#t2").val());
+            let z = x + y;
+            $("#output").html(z);
+          }
+          else {
+            alert("Number must be between 0 and 100");
+          }
+        }
+
+      });
+      $("#sub").click(function () {
+        let vo = checkvalidate();
+        if (vo == 0) {
+          let bo = checkvalidaterange();
+          if (bo == 1) {
+            let x = parseInt($("#t1").val());
+            let y = parseInt($("#t2").val());
+            let z = x - y;
+            $("#output").html(z);
+          }
+          else {
+            alert("Number must be between 0 and 100");
+          }
+        }
+
+      });
+      $("#mul").click(function () {
+        let vo = checkvalidate();
+        if (vo == 0) {
+          let bo = checkvalidaterange();
+          if (bo == 1) {
+            let x = parseInt($("#t1").val());
+            let y = parseInt($("#t2").val());
+            let z = x * y;
+            $("#output").html(z);
+          }
+          else {
+            alert("Number must be between 0 and 100");
+          }
+        }
+      });
+      $("#div").click(function () {
+        let vo = checkvalidate();
+        if (vo == 0) {
+          let bo = checkvalidaterange();
+          if (bo == 1) {
+            let x = parseInt($("#t1").val());
+            let y = parseInt($("#t2").val());
+            let z = x / y;
+            $("#output").html(z);
+          }
+          else {
+            alert("Number must be between 0 and 100");
+          }
+        }
+      });
+    }
+
+
+    )
+
+      ;
+    function checkvalidate() {
+      let flag = 0;
+      if ($("#t1").val() == "") {
+        alert("Enter a number");
+        flag = 1;
+      }
+      if ($("#t2").val() == "") {
+        alert("Enter a number");
+        flag = 1;
+
+      }
+      return flag;
+    }
+    function checkvalidaterange() {
+
+      let f1 = 0;
+      let x = parseInt($("#t1").val());
+      let y = parseInt($("#t2").val());
+      if ((x >= 0 && x < 100) && (y >= 0 && y < 100)) {
+
+        f1 = 1;
+      }
+      else {
+        f1 = 2;
+      }
+
+      return f1;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>calc</h1>
+  <input type="number" name="" id="t1"><br>
+  <input type="number" name="" id="t2"><br>
+  <button id="add">add</button>
+  <button id="sub">sub</button>
+  <button id="mul">mul</button>
+  <button id="div">div</button>
+  <div id="output"></div>
+</body>
+
+</html>
