@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopCar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="web2/style.css">
+  <link rel="icon" href="/html/images/car_buyicon.png">
+  <style>
+    body {
+      background-color: rgb(35, 27, 65);
+    }
+
+    /* .carousel-item img {
+      height: 500px;
+      width: 500px;
+      object-fit: cover;
+    } */
+    .cards-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .card {
+      margin-right: 15px;
+    }
+  </style>
+</head>
+
+<body class="">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <img src="/HTML/images/car_buyicon.png" height="50px" alt="">
+      <a class="navbar-brand" href="#">ShopCar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page">|</a>
+          </li>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Buy Car
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Sell Car
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Used Car
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Car Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="search-bar col-6">
+        <input type="textbox" id="search1" placeholder="search...." style="padding-left: 40px; height: 35px;">
+        <button type="button" onclick="search()"><img src="/HTML/images/search-icon.png" alt="" height="27px"
+            style="padding-left: 3px;"></button>
+      </div>
+      <div class="container col-2 m">
+        <ul class="navbar-nav mb-lg-0 ms-auto">
+          <li class="nav-item" style="text-decoration: none;">
+            <img src="/HTML/images/icons8-sign-in-64.png" alt="" height="30px">
+            <a href="#" >Sign In</a>
+            <img src="/HTML/images/icons8-log-in-64.png" alt="" height="30px">
+            <a href="#">Log In</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
+  <div class="container-fluid">
+    <!-- <div class="col">
+      <div class="conatainer text-danger">
+        <h1>Title</h1>
+      </div> -->
+    <div class="col-lg-12">
+      <div id="carouselExampleIndicators" class="carousel     slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/HTML/images/tata_car2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="color:chartreuse">
+              <h4><b>Tata Nexon</b></h4>
+              <p>Introducing the new Tata Motors</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/html/images/suzuki_car.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="color:chartreuse">
+              <h4><b>Suzuki Vitara Breza</b></h4>
+              <p>Introducing the new Vitara Breza</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/HTML/images/mghect_car.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="color:chartreuse">
+              <h4><b>MG Hector</b></h4>
+              <p>Introducing the new MG Hector</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/HTML/images/honda_car.jpg" alt="..." class="d-block w-100">
+            <div class="carousel-caption d-none d-md-block" style="color:chartreuse">
+              <h4><b>KIA Motors</b></h4>
+              <p>Introducing the new KIA Motors</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+
+      </div>
+    </div>
+  </div><br>
+
+  <div class="container-fluid text-warning bg-success pt-1">
+    <h2>Recommended Cars for you</h2>
+   
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card" style="width: 18rem;">
+              <img src="/HTML/images/car_card1.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Wolksvagen-sheamar</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/HTML/images/car_card2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Honda-city</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/HTML/images/car_card3.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Skoda-rapid</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="cards-wrapper">
+            <div class="card" style="width: 18rem;">
+              <img src="/HTML/images/car_card4.avif" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Chevrolet-maestro</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/HTML/images/card_card5.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Toyota-Tiamo</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/HTML/images/car_card6.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Tata-evo max</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="cards-wrapper">
+            <div class="card" style="width: 18rem;">
+              <img src="/HTML/images/car_card7.avif" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">MG Hector</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/HTML/images/car_card8.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Renault-Duster</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/HTML/images/car_card9.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Suzuki-plus</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div><br>
+
+  <section class="bg-success text-warning offers my-5">
+    <div class="container">
+      <div class="d-sm-flex align-items-center justify-content-between mb-3 mb-sm-4 pb-sm-2">
+        <h3 class="text-warning mb-2 mb-sm-0">Top Offers</h3>
+        <a href="#" class="btn text-warning text-decoration-underline fw-normal px-0">View all &rarr;</a>
+      </div>
+  
+  
+  
+      <div class="row">
+        <div class="col-lg-6 mb-lg-0 mb-4">
+          <div class="card border-1 h-100 border-dark rounded-3 bg-dark">
+            <h1 class="badge bg-success fs-5 position-absolute m-3" style="z-index: 1000;">
+            New
+          </h1>
+          <button type="button" class="btn btn-light position-absolute end-0 m-3  py-2 rounded-circle" style="z-index: 1000;" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt text-danger" viewBox="0 0 16 16">
+              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  </svg>
+          </button>
+            <div id="carouselExampleControls" class="carousel slide rounded-3" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/17.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/17.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/17.jpeg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+             <small class="mb-2">2015</small> <br>
+             <a href="#" class=" h5 link link-light text-warning">
+               Mercedes
+  
+             </a>
+             <p class="small text-primary mt-2">
+  $25,000
+             </p>
+             <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-paragraph me-2" viewBox="0 0 16 16">
+                <path d="M10.5 15a.5.5 0 0 1-.5-.5V2H9v12.5a.5.5 0 0 1-1 0V9H7a4 4 0 1 1 0-8h5.5a.5.5 0 0 1 0 1H11v12.5a.5.5 0 0 1-.5.5z"/>
+  </svg> New York
+             </p>
+            </div>
+          </div>
+        </div>
+  <div class="col-lg-6">
+    <div class="card bg-white  mb-4">
+      <h1 class="badge bg-primary fs-5 position-absolute m-3" style="z-index: 1000;">
+        Used
+      </h1>
+      <button type="button" class="btn btn-light position-absolute end-0 m-3  py-2 rounded-circle" style="z-index: 1000;" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt text-danger" viewBox="0 0 16 16">
+          <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+          <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  </svg>
+      </button>
+      <div class="row g-0 border rounded-3">
+        <div class="col-lg-4">
+          <div id="carouselExampleControls1" class="carousel h-100 slide rounded-3" data-bs-ride="carousel">
+            <div class="carousel-inner h-100">
+              <div class="carousel-item h-100 active">
+                <img src="images/09.jpeg" class="d-block h-100 w-100" alt="...">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="images/09.jpeg" class="d-block h-100 w-100" alt="...">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="images/09.jpeg" class="d-block h-100 w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card-body">
+            <small class="mb-2">2015</small> <br>
+            <a href="#" class=" h5 link link-light text-warning">
+              Mercedes
+  
+            </a>
+            <p class="small text-dark mt-2">
+              <b>  $25,000
+              </b>
+            </p>
+            <!-- <p>
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-paragraph me-2" viewBox="0 0 16 16">
+               <path d="M10.5 15a.5.5 0 0 1-.5-.5V2H9v12.5a.5.5 0 0 1-1 0V9H7a4 4 0 1 1 0-8h5.5a.5.5 0 0 1 0 1H11v12.5a.5.5 0 0 1-.5.5z"/>
+  </svg>
+            </p> -->
+           </div>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-white">
+      <h1 class="badge bg-danger fs-5 position-absolute m-3" style="z-index: 1000;">
+        Car
+      </h1>
+      <button type="button" class="btn btn-light position-absolute end-0 m-3  py-2 rounded-circle" style="z-index: 1000;" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt text-danger" viewBox="0 0 16 16">
+          <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+          <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  </svg>
+      </button>
+      <div class="row g-0 border rounded-3">
+        <div class="col-lg-4">
+          <div id="carouselExampleControls2" class="carousel h-100 slide rounded-3" data-bs-ride="carousel">
+            <div class="carousel-inner h-100">
+              <div class="carousel-item h-100 active">
+                <img src="/HTML/images/car_card7.avif" class="d-block h-100 w-100" alt="...">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="/HTML/images/car_card8.jpg" class="d-block h-100 w-100" alt="...">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="/HTML/images/car_card9.webp" class="d-block h-100 w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card-body">
+            <small class="mb-2">2015</small> <br>
+            <a href="#" class=" h5 link link-light text-warning">
+              Mercedes
+  
+            </a>
+            <p class="small text-dark mt-2">
+              <b>  $25,000
+              </b>
+            </p>
+            <!-- <p>
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-paragraph me-2" viewBox="0 0 16 16">
+               <path d="M10.5 15a.5.5 0 0 1-.5-.5V2H9v12.5a.5.5 0 0 1-1 0V9H7a4 4 0 1 1 0-8h5.5a.5.5 0 0 1 0 1H11v12.5a.5.5 0 0 1-.5.5z"/>
+  </svg> New York
+            </p> -->
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </section>
+<br>
+  <div class="container-fluid text-warning bg-success pt-1">
+    <h2>Popular Brands</h2>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card" style="width:10rem;">
+              <img src="/HTML/images/icons8-honda-50.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-suzuki-50.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-hyundai-48.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-audi-100.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-nissan-48.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-renault-48.png" class="card-img-top" alt="...">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card" style="width:10rem;">
+              <img src="/HTML/images/icons8-audi-100.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-tata-motors-limited,-an-indian-multinational-automotive-manufacturing-company-24.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-hyundai-48.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-toyota-48.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-nissan-48.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 10rem;">
+              <img src="/HTML/images/icons8-chevrolet-48.png" class="card-img-top" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+
+
+
+
+  <footer class="container-fluid bg-white">
+    <div class="row mt-4">
+      <div class="col-3 pt-1">
+        <div class="container text-danger">
+          <img src="/HTML/images/medal.png" alt="" height="70px">
+          <h3>India's #1</h3>
+          <p>Largest auto portal</p>
+        </div>
+      </div>
+      <div class="col-3 container text-danger">
+        <img src="/HTML/images/car_sold.png" alt="" height="70px">
+        <h3>Car Sold</h3>
+        <p>Every 5 minute</p>
+      </div>
+      <div class="col-3 pt-2">
+        <div class="container text-danger">
+          <img src="/HTML/images/offers.png" alt="">
+          <h3>Offers</h3>
+          <p>Stay updated pay less</p>
+        </div>
+      </div>
+      <div class="col-3 pt-2">
+        <div class="container text-danger">
+          <img src="/HTML/images/compare_car.png" alt="">
+          <h3>Compare</h3>
+          <p>Decode the right car</p>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <ul class="list-unstyled">
+            <b>Overview</b>
+            <li><a href="#" class="link-dark">About Us</a></li>
+            <li><a href="#" class="link-dark">FAQ</a></li>
+            <li><a href="#" class="link-dark">Contact Us</a></li>
+            <li><a href="#" class="link-dark">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul class="list-unstyled">
+            <b>Others</b>
+            <li><a href="#" class="link-dark">Scrap my Car</a></li>
+            <li><a href="#" class="link-dark">Advertise with us</a></li>
+            <li><a href="#" class="link-dark">Careers</a></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul class="list-unstyled">
+            <b>Connect with us</b>
+            <li><a href="#" class="link-dark">support@shopcar.com</a></li>
+            <li><a href="#" class="link-dark">Dealer Solutions</a></li>
+            <li><a href="#" class="link-dark">Used car business</a></li>
+            <li><a href="#" class="link-dark">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul class="list-unstyled">
+            <b>Experience Shopcar app</b>
+            <li><img src="/HTML/images/apple_store.png" alt="" height="60px" width="200px"></li>
+            <li><img src="/HTML/images/google_play.png" alt="" height="60px"></li><br>
+            <li><a href="#" class="link-dark">ShopCar Group Ventures</a></li>
+            <li><img src="/html/images/policy_baz_icon.png" width="200px" alt=""></li>
+            <li><a href="#" class="link-dark"><img src="/HTML/images/zig_wheels_icon.png" width="200px" alt=""></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>
