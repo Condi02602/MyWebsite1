@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aniplex</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/HTML/web2/style.css">
+  <link rel="icon" href="/HTML/images/onep2.jpg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body>nav>div.container.px-4>div>img {
+      width: 4%;
+      height: 10%;
+    }
+
+    .carousel-item {
+      height: 20%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success px-5">
+    <div class="container px-4">
+      <div class="conatiner">
+        <img src="/HTML/images/onep.jpg">
+        <a href="#" class="navbar-brand ms-4 ps-4"><b>Aniplex</b></a>
+        <div class="float-end">
+          <div class="collapse navbar-collapse me-4 pe-4" id="navbarSupportContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active border-start border-5 ps-3" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-3">
+      <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Search Anime" aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-warning">search</button>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleDark" class="carousel carousel-white slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="/HTML//images/aot3.avif" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Attack On Titan</h2>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="/HTML//images/mha2.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>My hero Academia</h2>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/HTML//images/chainsaw.avif" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>chainsaw Man</h2>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="features my-5">
+    <div class="container">
+      <div class="row text-center justify-content-evenly">
+        <div class="col-md-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-gear-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+          </svg>
+          <h5>Download & Stream</h5>
+          <p>Download and Stream your favourite animes in high resolution with one click</p>
+
+        </div>
+        <div class="col-md-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cloud-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z" />
+          </svg>
+          <h5>Share</h5>
+          <p>Share various episodes to your friends</p>
+        </div>
+        <div class="col-md-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+            class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+            <path
+              d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+          </svg>
+          <h3>
+            Subscribe
+          </h3>
+          <p>
+            Subscribe and avail premium services.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="ready text-center py-5 text-white">
+    <h1>The place to Stream all your favourite Animes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </div>
+  <div class="about my-5">
+    <div class="row text-center justify-content-center">
+      <div class="col col-md-6">
+        <h3>Merchandise</h3>
+        <p class="text-muted">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil velit quae minus nesciunt, architecto hic sed
+          harum debitis facilis, animi perspiciatis provident reiciendis doloremque delectus laboriosam repellendus
+          voluptate repellat aliquid.
+        </p>
+        <!-- below example is for js alert msg -->
+        <a href="#" class="btn btn-outline-success"
+          onclick="alert('we r currently facing an issue try again later')">Buy Merchandise</a>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/HTML/images/aothoodie.jpg" alt="Image 1" height="20%">
+            </div>
+            <div class="carousel-item">
+              <img src="/HTML/images/nartshirt.webp" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="/HTML/images/dstshirt.jpg" alt="Image 3">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-5 mt-md-0 mt-5">
+        <img src="/HTML/images/tanjiro.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="see py-5 my-5">
+    <div class="container">
+      <div class="row justify-content-center text-dark">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn text-white w-50" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="80" fill="currentColor" class="bi bi-play-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+          </svg>
+          <br>
+          <h2>Watch Trailer</h2>
+        </button>
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/S8_YwFLCh4U"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery text-center">
+    <div class="container">
+      <h1>Top Animes</h1>
+      <p class="text-muted">
+        Watch the most trending Animes over here
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row justify-content-evenly">
+            <div class="col-md-3">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <img src="/HTML/images/Fire_Force.jpg" class="img-fluid" alt="">
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Fire Force</h5>
+
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="/HTML/images/Fire_Force.jpg" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Watch</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <img src="/HTML/images/cyberp.jpg" class="img-fluid" alt="">
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Cyberpunk Edgerunners</h5>
+
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="/HTML/images/cyberp.jpg" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Watch</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                <img src="/HTML/images/godoH.jpg" class="img-fluid" alt="">
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">God Of High School</h5>
+
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="/HTML/images/godoH.jpg" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" href="https://ww4.gogoanime2.org/anime/enen-no-shouboutai"
+                        class="btn btn-primary">Watch</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                <img src="/HTML/images/dbz.jpg" class="img-fluid" alt="">
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Dragon Ball Z</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="/HTML/images/dbz.jpg" class="img-fluid" alt="">
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Watch</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="signup bg-warning text-black text-center py-5">
+    <div class="container">
+      <h1 class="fs-3">Sign Up to keep a track of all the animes you have watched or are binging</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente voluptatum nobis deserunt, labore consectetur
+        non delectus nesciunt unde fuga voluptatem laboriosam quos maxime? At ipsum eum laboriosam, animi ea facere.
+      </p>
+      <form class="row justify-content-center">
+        <div class="col-md-2 mb-3">
+          <input type="text" class="form-control" placeholder="Your Name">
+        </div>
+        <div class="col-md-2 mb-3">
+          <input type="text" class="form-control" placeholder="Your Email address">
+        </div>
+        <div class="col-md-2 mb-3">
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer style="background-color:rgb(3, 162, 198);" class="py-3 text-black text-center">
+    <p>
+      Copyright &copy; September 2021
+    </p>
+  </footer>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="../../Learning kit/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
